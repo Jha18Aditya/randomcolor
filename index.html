@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <nav class="nav-bar">
+        <h2 class="logo">ColorMaster</h2>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="hero-section">
+        <h1 class="rgbhead">Color Palette Generator</h1>
+        <p class="subtitle">Create stunning color combinations for your projects</p>
+    </section>
+
+    <div class="color-container">
+        <div class="color-tools">
+            <select class="format-select" id="colorFormat">
+                <option value="rgb">RGB</option>
+                <option value="hex">HEX</option>
+            </select>
+            <select class="palette-type" id="paletteType">
+                <option value="single">Single Color</option>
+                <option value="complementary">Complementary</option>
+                <option value="triadic">Triadic</option>
+                <!-- <option value="analogous">Analogous</option> -->
+            </select>
+        </div>
+
+        <div class="palette-container">
+            <div class="color primary">
+                <h4 class="color-code">RGB code</h4>
+                <div class="color-actions">
+                    <button class="action-btn" title="Copy Color"><i class="fas fa-copy"></i></button>
+                </div>
+            </div>
+            
+            <div class="palette-colors hidden">
+                <div class="color secondary">
+                    <h4 class="color-code">RGB code</h4>
+                    <div class="color-actions">
+                        <button class="action-btn" title="Copy Color"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+                <div class="color tertiary">
+                    <h4 class="color-code">RGB code</h4>
+                    <div class="color-actions">
+                        <button class="action-btn" title="Copy Color"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="colorbt"><i class="fas fa-random"></i> Generate Colors</button>
+        </div>
+    </div>
+
+    <section class="color-info">
+        <div class="info-card">
+            <h3>Color Values</h3>
+            <div class="value-list">
+                <div class="value-item">
+                    <span>RGB:</span>
+                    <code id="rgbValue">rgb(0, 0, 0)</code>
+                </div>
+                <div class="value-item">
+                    <span>HEX:</span>
+                    <code id="hexValue">#000000</code>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>Made by <i class="fas fa-smile"></i> AJ</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
